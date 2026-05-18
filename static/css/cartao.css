@@ -18,8 +18,10 @@
     --botao-seta: #652A0E;
     --botao-seta-hover: #3d1706;
     --botao-cartao: #F0E9D8;
+    --botao-cartao-hover: #DAD2BF;
+    --fundo-pix: #e7e1d5;
+    --divisor: #ebe6db;
 }
-
 .dark{
     --cor-fundo: #1A110E;
     --cor-card: #2B1C16;
@@ -34,7 +36,10 @@
     --botao-seta: #F0ECE1;
     --botao-seta-hover: #d6caa8;
     --botao-cartao: #402820;
-}
+    --botao-cartao-hover: #2B1913;
+    --fundo-pix: #412C25;
+    --divisor: #311e18;
+    }
 
 body{
     min-height: 100vh;
@@ -64,8 +69,6 @@ body{
     transform: scale(1.05);
 }
 
-
-
 .tema{
     display: flex;
     align-items: center;
@@ -80,32 +83,23 @@ body{
     background-color: var(--fundo-tema);
     border-radius: 50px;
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     position: relative;
-
     padding: 5px;
-
     width: 55px;
     height: 28px;
 }
 
 .indicador{
     background-color: var(--indicador);
-
     position: absolute;
-
     width: 22px;
     height: 22px;
-
     border-radius: 50%;
-
     top: 3px;
     left: 3px;
-
     transition: transform 0.2s linear;
 }
 
@@ -236,19 +230,14 @@ body{
     margin-top: 20px
 }
 
-.container .btns button{
-    gap: 20px;
-    background-color: var(--botao-cartao);
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 0 14px 24px rgba(0,0,0,0.15);
-}
+
 .container .btns .itens p{
    font-size: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+}
+
 @media(max-width:768px){
 
     .container{
@@ -266,3 +255,161 @@ body{
     }
 }
 
+.container .btns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--botao-cartao);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.15);
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.container .btns a:hover{
+    background-color: var(--botao-cartao-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.container .btns-vales .itens a{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--botao-cartao);
+    border-radius: 20px;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.15);
+    padding: 15px;
+}
+
+.container .btns-vales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;]
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.container .btns-vales a:hover{
+    background-color: var(--botao-cartao-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.vales{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vales .fechar button{
+    color: var(--botao-seta);
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.vales .fechar button:hover{
+    color: var(--botao-seta-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.botao-pix{
+    display: flex;
+    justify-content: center;
+}
+
+.botao-pix a{
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    background-color: var(--botao);
+    color: var(--fonte-botao);
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+}
+
+.botao-pix a:hover{
+    background-color: var(--botao-hover);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.preco{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.preco h2{
+    font-weight: 700;
+    margin: 0;
+}
+
+.preco img{
+    height: 75px;
+    width: 75px;
+}
+
+.qrCode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCode img{
+    padding: 15px;
+    height: 250px;
+    width: 250px;
+}
+
+.container-chave {
+    display: flex;
+    justify-content: center;
+    background-color: var(--fundo-pix);
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 400px
+}
+
+.container-chave p{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container .texto{
+    padding-left: 22px;
+    margin-bottom: 40px;
+}
+
+.container .divisor {
+    background-color: var(--divisor);
+    height: 2px;
+    width: auto;
+    margin-top: 50px;
+}
+
+.container .texto-pedido{
+    padding-left: 22px;
+    margin-top: 22px;
+    margin-bottom: 15px;
+}

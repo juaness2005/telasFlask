@@ -18,22 +18,19 @@
     <div class="container">
 
         <div class="preco">
-
             <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="logo" class="logo">
-
             <h1>R$ 15,00</h1>
-
         </div>
 
         <div class="pagamento">
 
             <h1>Pagamento em cartão</h1>
 
-            <form class="form">
+            <form class="form" action="{{ url_for('conclusao') }}" method="GET">
 
                 <div class="campo">
                     <label>Número do cartão:</label>
-                   <input type="text" id="cartao" placeholder="0000 0000 0000 0000" inputmode="numeric">
+                    <input type="text" id="cartao" placeholder="0000 0000 0000 0000" inputmode="numeric">
                 </div>
 
                 <div class="campo">
@@ -44,32 +41,19 @@
                 <div class="linha">
 
                     <div class="campo-lado">
-
                         <label>CVC/CVV:</label>
                         <input type="text" placeholder="Digite o CVC" maxlength="3" inputmode="numeric" required>
-
                     </div>
 
                     <div class="campo-lado">
-
                         <label>Data de vencimento:</label>
-                        <input
-                            type="text"
-                            id="validade"
-                            placeholder="MM/AA"
-                            inputmode="numeric"
-                            required>
-
+                        <input type="text" id="validade" placeholder="MM/AA" inputmode="numeric" required>
                     </div>
 
                 </div>
 
                 <div class="botao-form">
-
-                    <button type="submit">
-                        Adicionar Cartão
-                    </button>
-
+                    <button type="submit">Adicionar Cartão</button>
                 </div>
 
             </form>

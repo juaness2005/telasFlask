@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cartao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Conclusão de pagamento</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="container">
+        <div class="preco">
+            <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="logo">
+            <h2>Pedido: 00001</h2>
+        </div>
+
+        <p class="texto">Apresente o QR code na Cantina Carvalho para a retirada do seu pedido</p>
+
+        <div class="qrCode">
+            <img alt="qrCode" id="qrCode" class="qrCode">
+        </div>
+
+        <div class="divisor"></div>
+
+        <p class="texto-pedido">Acompanhe o seu pedido:</p>
+
+        <h1 class="texto">O seu pedido ficará pronto daqui a 20 minutos</h1>
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='js/cartao.js') }}"></script>
+
+</body>
+</html>

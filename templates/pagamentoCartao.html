@@ -19,6 +19,7 @@
 
         <h1>Adicionar cartão</h1>
 
+
         <div class="btns">
 
             <div class="itens">
@@ -36,25 +37,25 @@
             </div>
 
             <div class="itens">
-                <button id="alimentacao">
+                <a id="alimentacao">
                     <img src="{{ url_for('static', filename='assets/alimentacao.png') }}">
-                </button>
+                </a>
                 <p>Vale alimentação</p>
             </div>
 
             <div class="itens">
-                <button id="refeicao">
+                <a id="refeicao">
                     <img src="{{ url_for('static', filename='assets/refeicao.png') }}">
-                </button>
+                </a>
                 <p>Vale refeição</p>
             </div>
 
         </div>
     </div>
 
-    <div class="container">
 
-        <div id="opcoes-alimentacao" class="hidden">
+
+        <div id="opcoes-alimentacao" class="container hidden">
 
             <div class="vales">
                 <h1>Vale alimentação</h1>
@@ -64,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="btns">
+            <div class="btns-vales">
 
                 {% for img in [
                     'pluxee.png',
@@ -78,7 +79,7 @@
                 ] %}
 
                 <div class="itens">
-                    <a href="cartao.html">
+                    <a href="{{ url_for('cartao') }}">
                         <img src="{{ url_for('static', filename='assets/' + img) }}">
 
                     </a>
@@ -90,9 +91,8 @@
 
         </div>
 
-    </div>
-    <div class="container">
-        <div id="opcoes-refeicao" class="hidden">
+
+        <div id="opcoes-refeicao" class="container hidden">
 
             <div class="vales">
                 <h1>Vale Refeição</h1>
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="btns">
+            <div class="btns-vales">
 
                 {% for img in [
                     'pluxee.png',
@@ -116,9 +116,9 @@
                 ] %}
 
                 <div class="itens">
-                    <button>
+                    <a href="{{ url_for('cartao') }}">
                         <img src="{{ url_for('static', filename='assets/' + img) }}">
-                    </button>
+                    </a>
                 </div>
 
                 {% endfor %}
@@ -127,8 +127,6 @@
 
         </div>
 
-
-    </div>
 
     <script src="{{ url_for('static', filename='js/cartao.js') }}"></script>
 
