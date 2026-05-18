@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cartao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cantina Carvalhos - Cartões</title>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container" id="menu-principal">
+
+        <h1>Adicionar cartão</h1>
+
+        <div class="btns">
+
+            <div class="itens">
+                <a href="{{ url_for('cartao') }}">
+                    <img src="{{ url_for('static', filename='assets/credito.png') }}">
+                </a>
+                <p>Cartão de crédito</p>
+            </div>
+
+            <div class="itens">
+                <a href="{{ url_for('cartao') }}">
+                    <img src="{{ url_for('static', filename='assets/debito.png') }}">
+                </a>
+                <p>Cartão de débito</p>
+            </div>
+
+            <div class="itens">
+                <button id="alimentacao">
+                    <img src="{{ url_for('static', filename='assets/alimentacao.png') }}">
+                </button>
+                <p>Vale alimentação</p>
+            </div>
+
+            <div class="itens">
+                <button id="refeicao">
+                    <img src="{{ url_for('static', filename='assets/refeicao.png') }}">
+                </button>
+                <p>Vale refeição</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div id="opcoes-alimentacao" class="hidden">
+
+            <div class="vales">
+                <h1>Vale alimentação</h1>
+
+                <div class="fechar">
+                    <button>X</button>
+                </div>
+            </div>
+
+            <div class="btns">
+
+                {% for img in [
+                    'pluxee.png',
+                    'alelo.png',
+                    'Edenred.png',
+                    'vrBeneicios-alimentação.png',
+                    'flash.png',
+                    'caju.png',
+                    'swile.png',
+                    'UpBrasil.png'
+                ] %}
+
+                <div class="itens">
+                    <a href="cartao.html">
+                        <img src="{{ url_for('static', filename='assets/' + img) }}">
+
+                    </a>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="opcoes-refeicao" class="hidden">
+
+            <div class="vales">
+                <h1>Vale Refeição</h1>
+
+                <div class="fechar">
+                    <button>X</button>
+                </div>
+            </div>
+
+            <div class="btns">
+
+                {% for img in [
+                    'pluxee.png',
+                    'alelo.png',
+                    'Edenred.png',
+                    'vrBeneicios-alimentação.png',
+                    'flash.png',
+                    'caju.png',
+                    'swile.png',
+                    'UpBrasil.png'
+                ] %}
+
+                <div class="itens">
+                    <button>
+                        <img src="{{ url_for('static', filename='assets/' + img) }}">
+                    </button>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cartao.js') }}"></script>
+
+</body>
+
+</html>

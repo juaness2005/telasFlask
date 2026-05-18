@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cartao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Pagamento em Cartão</title>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container">
+
+        <div class="preco">
+
+            <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="logo" class="logo">
+
+            <h1>R$ 15,00</h1>
+
+        </div>
+
+        <div class="pagamento">
+
+            <h1>Pagamento em cartão</h1>
+
+            <form class="form">
+
+                <div class="campo">
+                    <label>Número do cartão:</label>
+                   <input type="text" id="cartao" placeholder="0000 0000 0000 0000" inputmode="numeric">
+                </div>
+
+                <div class="campo">
+                    <label>Nome:</label>
+                    <input type="text" placeholder="Digite o nome do titular" required>
+                </div>
+
+                <div class="linha">
+
+                    <div class="campo-lado">
+
+                        <label>CVC/CVV:</label>
+                        <input type="text" placeholder="Digite o CVC" maxlength="3" inputmode="numeric" required>
+
+                    </div>
+
+                    <div class="campo-lado">
+
+                        <label>Data de vencimento:</label>
+                        <input
+                            type="text"
+                            id="validade"
+                            placeholder="MM/AA"
+                            inputmode="numeric"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="botao-form">
+
+                    <button type="submit">
+                        Adicionar Cartão
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cartao.js') }}"></script>
+
+</body>
+
+</html>

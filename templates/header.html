@@ -1,0 +1,24 @@
+     <header>
+        <div class="topo">
+            <a href="{{ url_for('pagamento') }}" class="voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            <div class="tema">
+
+                <input type="checkbox" class="checkbox" id="botao-tema">
+
+                <label class="label" for="botao-tema">
+
+                    <img src="{{ url_for('static', filename='assets/sol.png') }}" alt="Sol" class="img-sol">
+
+                    <img src="{{ url_for('static', filename='assets/lua.png') }}" alt="Lua" class="img-lua">
+
+                    <div class="indicador"></div>
+
+                </label>
+            </div>
+
+        </div>
+
+    </header>
