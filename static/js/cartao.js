@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
-    // TEMA DARK
-    // =========================
-
     const checkbox = document.querySelector("#botao-tema");
 
     const qr = document.querySelector("#qrCode");
@@ -28,13 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // inicializa QR
     gerarQR(false);
-
-
-    // =========================
-    // VA / VR MODAIS
-    // =========================
 
     const botaoAlimentacao = document.getElementById("alimentacao");
     const opcoesAlimentacao = document.getElementById("opcoes-alimentacao");
@@ -72,11 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // =========================
-    // CARTÃO
-    // =========================
-
     const cartao = document.querySelector("#cartao");
 
     if (cartao) {
@@ -91,11 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cartao.value = valor;
         });
     }
-
-
-    // =========================
-    // VALIDADE
-    // =========================
 
     const validade = document.querySelector("#validade");
 

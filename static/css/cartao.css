@@ -49,8 +49,6 @@ body{
     transition: 0.3s ease;
 }
 
-/* HEADER */
-
 .topo{
     display: flex;
     justify-content: space-between;
@@ -413,3 +411,53 @@ body{
     margin-top: 22px;
     margin-bottom: 15px;
 }
+
+.conteudo-conta{
+    display:flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+
+}
+
+.conteudo-conta button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--fonte-texto);
+    font-weight: 700;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.15);
+    padding: 6px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.conteudo-conta button:hover{
+    background-color: var(--botao-cartao-hover);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.container-conteudo{
+    display:flex;
+    justify-content: space-between;
+}
+
+.img-comida img{
+    border-radius: 100px;
+    width: 75px;
+    height: 75px;
+}
+
+.img-comida{
+    font-size: 20px;
+    color: var(--fonte-texto);
+    font-weight: 700;
+    display:flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+
+

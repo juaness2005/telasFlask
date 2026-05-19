@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cartao.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Conta funcionário</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="preco">
+        <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="logo">
+        <h2>Conta de João Pereira</h2>
+    </div>
+
+    <div class="container">
+        <div class="container-conteudo">
+
+            <div class="img-comida">
+                <img class="comida" src="{{ url_for('static', filename='assets/comida1.png') }}">
+                <p>Pão de queijo</p>
+            </div>
+
+            <div class="conteudo-conta">
+                <P>31/03</P>
+                <button>$</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="container-conteudo">
+
+            <div class="img-comida">
+                <img class="comida" src="{{ url_for('static', filename='assets/comida2.png') }}">
+                <p>Esfirra</p>
+            </div>
+
+            <div class="conteudo-conta">
+                <P>31/03</P>
+                <button>$</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="container-conteudo">
+
+            <div class="img-comida">
+                <img class="comida" src="{{ url_for('static', filename='assets/comida3.png') }}">
+                <p>Pepsi</p>
+            </div>
+
+            <div class="conteudo-conta">
+                <P>31/03</P>
+                <button>$</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/cartao.js') }}"></script>
+</body>
+</html>
